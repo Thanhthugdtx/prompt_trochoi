@@ -42,17 +42,20 @@ const App: React.FC = () => {
   return (
     <div className="min-h-screen p-4 md:p-8 max-w-7xl mx-auto flex flex-col">
       <header className="mb-8 text-center">
-        <h1 className="text-3xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-700 via-pink-600 to-indigo-600 mb-2 drop-shadow-sm">
+        <h1 className="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600 mb-1">
           Công cụ tạo Prompt trò chơi cho Canva Code
         </h1>
-        <p className="text-slate-600 text-lg font-medium">
+        <div className="text-2xl font-bold text-indigo-500 mb-3" style={{ fontFamily: 'cursive' }}>
+          Thanh_Thu
+        </div>
+        <p className="text-slate-600">
           Tạo prompt code trò chơi chuyên nghiệp chỉ trong vài giây
         </p>
       </header>
 
-      <main className="flex-grow grid grid-cols-1 lg:grid-cols-2 gap-6 h-[calc(100vh-200px)] min-h-[600px]">
+      <main className="grid grid-cols-1 lg:grid-cols-2 gap-6 pb-8">
         {/* Left Column: Inputs */}
-        <div className="h-full">
+        <div>
           <InputForm 
             inputs={inputs} 
             setInputs={setInputs} 
@@ -62,13 +65,13 @@ const App: React.FC = () => {
         </div>
 
         {/* Right Column: Output */}
-        <div className="h-full">
+        <div>
           <ResultDisplay prompt={generatedPrompt} />
         </div>
       </main>
 
-      <footer className="mt-8 text-center text-slate-400 text-sm">
-        <p>© 2024 Powered by Google Gemini & Canva Style Guidelines</p>
+      <footer className="mt-auto text-center text-slate-400 text-sm py-4 border-t border-slate-200">
+        © 2024 Powered by Google Gemini & Canva Style Guidelines
       </footer>
     </div>
   );

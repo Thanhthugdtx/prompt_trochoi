@@ -11,6 +11,21 @@
       body {
         font-family: 'Quicksand', sans-serif;
       }
+      /* Custom Scrollbar for better aesthetics */
+      .custom-scrollbar::-webkit-scrollbar {
+        width: 8px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-track {
+        background: #f1f5f9;
+        border-radius: 4px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-thumb {
+        background: #cbd5e1;
+        border-radius: 4px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+        background: #94a3b8;
+      }
     </style>
   <script type="importmap">
 {
@@ -23,8 +38,7 @@
 }
 </script>
 </head>
-  <body class="bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 min-h-screen text-slate-800">
+  <body class="bg-slate-50 min-h-screen text-slate-800">
     <div id="root"></div>
-    <script type="module" src="/index.tsx"></script>
   </body>
 </html>

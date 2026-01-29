@@ -40,7 +40,7 @@ const InputForm: React.FC<InputFormProps> = ({ inputs, setInputs, onSubmit, isLo
   );
 
   return (
-    <div className="bg-white p-6 rounded-2xl shadow-xl border border-purple-100 h-full flex flex-col">
+    <div className="bg-white p-6 rounded-2xl shadow-xl border border-purple-100 flex flex-col">
       <h2 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600 mb-6 flex items-center gap-2">
         <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
@@ -48,10 +48,10 @@ const InputForm: React.FC<InputFormProps> = ({ inputs, setInputs, onSubmit, isLo
         Thiết kế Trò chơi
       </h2>
       
-      <div className="space-y-6 flex-grow overflow-y-auto pr-2 custom-scrollbar">
+      <div className="space-y-6">
         <div>
           <div className="flex items-center justify-between mb-2">
-            <label className="text-sm font-semibold text-slate-700">
+            <label className="text-lg font-bold text-slate-700">
               1. Nội dung / Mục tiêu chính của trò chơi
             </label>
             <ExampleButton field="mainGoal" value={EXAMPLES.mainGoal} />
@@ -67,7 +67,7 @@ const InputForm: React.FC<InputFormProps> = ({ inputs, setInputs, onSubmit, isLo
 
         <div>
           <div className="flex items-center justify-between mb-2">
-            <label className="text-sm font-semibold text-slate-700">
+            <label className="text-lg font-bold text-slate-700">
               2. Nội dung câu hỏi cần tạo
             </label>
             {/* Example button removed for field 2 */}
@@ -83,7 +83,7 @@ const InputForm: React.FC<InputFormProps> = ({ inputs, setInputs, onSubmit, isLo
 
         <div>
           <div className="flex items-center justify-between mb-2">
-            <label className="text-sm font-semibold text-slate-700">
+            <label className="text-lg font-bold text-slate-700">
               3. Đối tượng chơi / Bậc học hay độ tuổi
             </label>
             <ExampleButton field="targetAudience" value={EXAMPLES.targetAudience} />
@@ -99,7 +99,7 @@ const InputForm: React.FC<InputFormProps> = ({ inputs, setInputs, onSubmit, isLo
 
         <div>
           <div className="flex items-center justify-between mb-2">
-            <label className="text-sm font-semibold text-slate-700">
+            <label className="text-lg font-bold text-slate-700">
               4. Nhiệm vụ chơi / Số câu hỏi / Dạng câu hỏi
             </label>
             <ExampleButton field="gameTasks" value={EXAMPLES.gameTasks} />
@@ -115,7 +115,7 @@ const InputForm: React.FC<InputFormProps> = ({ inputs, setInputs, onSubmit, isLo
 
         <div>
           <div className="flex items-center justify-between mb-2">
-            <label className="text-sm font-semibold text-slate-700">
+            <label className="text-lg font-bold text-slate-700">
               5. Hình thức trò chơi
             </label>
             <ExampleButton field="gameFormat" value={EXAMPLES.gameFormat} />
@@ -149,7 +149,7 @@ const InputForm: React.FC<InputFormProps> = ({ inputs, setInputs, onSubmit, isLo
               Đang tạo Prompt...
             </span>
           ) : (
-            'Tạo Prompt (Code) ngay'
+            'Tạo Prompt ngay'
           )}
         </button>
       </div>
